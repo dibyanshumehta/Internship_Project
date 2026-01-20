@@ -6,8 +6,8 @@ const Signup = () => {
   const {formData, handleFormChange, handleFormSubmit} = registrationHelper();
   return (
     <>
-      <div className="container">
-        <div className="row">
+      <div className="container-fluid vw-100">
+        <div className="row justify-content-center align-items-center vh-100">
           <div className="col-lg-4">
             <h2>Sign Up</h2>
             <p>Make your id to be the part of this project.</p>

@@ -1,5 +1,5 @@
 import {Route, Routes} from 'react-router-dom';
-import DashboardPage from './components/dashboard/Dashboard.jsx';
+// import DashboardPage from './components/dashboard/Dashboard.jsx';
 import { useEffect, useState } from 'react';
 import ProtectedRoute from "./components/routes/ProtectedRoute.jsx";
 import Signup from './components/auth/signup.jsx';
@@ -22,14 +22,14 @@ function App() {
         <Route
           path="/login" element={<Login/>}
         />
-        <Route
+        {/* <Route
           path="/dashboard"
           element={
             <ProtectedRoute>
               <DashboardPage />
             </ProtectedRoute>
           }
-        />
+        /> */}
       </Routes>
 
     </>
