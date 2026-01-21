@@ -32,3 +32,16 @@ export const postLoginData = createAsyncThunk(
     }
   }
 );
+
+export const axiosInstance = axios.create({
+  baseURL: "http://localhost:9000/auth",
+});
+
+axiosInstance.interceptors.request.use((config) => {
+  const token = localStorage.getItem('authToken');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+

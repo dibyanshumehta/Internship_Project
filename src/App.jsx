@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import ProtectedRoute from "./components/routes/ProtectedRoute.jsx";
 import Signup from './components/auth/signup.jsx';
 import Login from './components/auth/login.jsx';
+import Navbar from './components/navbar/Navbar.jsx';
+import Dashboard from './components/dashboard/Dashboard.jsx';
 function App() {
   const [authToken, setAuthToken] = useState(false);
 
@@ -15,6 +17,8 @@ function App() {
   });
   return (
     <>
+    {/* <Dashboard /> */}
+    {/* <Navbar/> */}
       <Routes>
         <Route
           path="/" element={<Signup/>}
@@ -22,14 +26,14 @@ function App() {
         <Route
           path="/login" element={<Login/>}
         />
-        {/* <Route
+        <Route
           path="/dashboard"
           element={
             <ProtectedRoute>
-              <DashboardPage />
+              <Dashboard />
             </ProtectedRoute>
           }
-        /> */}
+        />
       </Routes>
 
     </>
